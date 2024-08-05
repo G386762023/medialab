@@ -1,4 +1,37 @@
+p {
+	color: rgb(255, 255, 255);
+    text-shadow: rgb(17, 0, 112) 1px 0 2px;;
+}
+
+p.info {
+	font-size: small;
+}
+p.target {
+    border: 5px solid rgb(81, 81, 255);
+    padding: 10px;
+    margin: 0px;
+    width: 1000px;
+    height: 80px;
+    background: rgb(210, 243, 255);
+}
 h1 {
-	text-shadow: navy 1px 0 10px;;
-	color: white;
+	color: rgb(0, 38, 255);
+    
+}
+h2 {
+	color: #fcfdfd;
+    text-shadow: rgb(2, 31, 247) 1px 0 1px;;
+	margin: 5px;
+	background: linear-gradient(to left, white, #63d3f8);
+}
+div#zentai {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-auto-rows: 400px 400px;
+	grid-gap: 5px;
+	width: 1500px;
+}
+div#zentai > div {
+	margin-left: 5px;
+	background-color: #b7e9ff;
 }
