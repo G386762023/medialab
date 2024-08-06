@@ -2,7 +2,7 @@ let b = document.querySelector('button#btn');
 b.addEventListener('click', sendRequest);
 
 function print(data){
-  var l1= ["緯度: " + data.coord.lon, "経度: " + data.coord.lat, "天気: " + data.weather[0].description, "最高気温: " + data.main.temp_max, "最低気温: " + data.main.temp_min, "湿度: " + data.main.humidity, "都市名: " + data.name];
+  var l1= ["天気: " + data.weather[0].description, "最高気温: " + data.main.temp_max, "最低気温: " + data.main.temp_min, "湿度: " + data.main.humidity, "風速: " + data.wind.speed,"緯度: " + data.coord.lon, "経度: " + data.coord.lat, ];
       for (var i = 0; i < l1.length; i++) {
         var l2 = document.createElement('li');
         l2.textContent = l1[i];

@@ -4,15 +4,15 @@ h1 {
     background: rgb(61, 103, 255);
 }
 ul {
-    color:rgb(230, 245, 255);
+    color:rgb(255, 255, 255);
     list-style-type: none;
     text-shadow: rgb(9, 0, 63) 1px 0 2px;;
     border: 5px solid rgb(81, 81, 255);
     padding: 10px;
     margin: 10px;
-    width: 400px;
+    width: 200px;
     height: 170px;
-    background: rgb(210, 243, 255);
+    background: rgb(133, 222, 255);
 }
 label {
     color:rgb(3, 53, 255);
