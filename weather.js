@@ -1,63 +1,17 @@
-// let data= {
-//   "coord": {
-//     "lon": 116.3972,
-//     "lat": 39.9075
-//   },
-//   "weather": [
-//     {
-//       "id": 803,
-//       "main": "Clouds",
-//       "description": "曇りがち",
-//       "icon": "04d"
-//     }
-//   ],
-//   "base": "stations",
-//   "main": {
-//     "temp": 9.94,
-//     "feels_like": 8.65,
-//     "temp_min": 9.94,
-//     "temp_max": 9.94,
-//     "pressure": 1022,
-//     "humidity": 14,
-//     "sea_level": 1022,
-//     "grnd_level": 1016
-//   },
-//   "visibility": 10000,
-//   "wind": {
-//     "speed": 2.65,
-//     "deg": 197,
-//     "gust": 4.84
-//   },
-//   "clouds": {
-//     "all": 53
-//   },
-//   "dt": 1646542386,
-//   "sys": {
-//     "type": 1,
-//     "id": 9609,
-//     "country": "CN",
-//     "sunrise": 1646520066,
-//     "sunset": 1646561447
-//   },
-//   "timezone": 28800,
-//   "id": 1816670,
-//   "name": "北京市",
-//   "cod": 200
-// };
-
-// ////////// 課題3-2 ここからプログラムを書こう
-// console.log(data)
-// let div = document.querySelector('div#result');
-// let ul = document.createElement('ul'); 
-// ul.textContent = '緯度'+data.coord.lon+'経度'+data.coord.lat;
-// div.insertAdjacentElement('beforeend', ul);
-
-//button
 let b = document.querySelector('button#btn');
-b.addEventListener('click', showSelectResult);
+b.addEventListener('click', sendRequest);
 
-
-function showSelectResult() {
+function print(data){
+  var l1= ["緯度: " + data.coord.lon, "経度: " + data.coord.lat, "天気: " + data.weather[0].description, "最高気温: " + data.main.temp_max, "最低気温: " + data.main.temp_min, "湿度: " + data.main.humidity, "都市名: " + data.name];
+      for (var i = 0; i < l1.length; i++) {
+        var l2 = document.createElement('li');
+        l2.textContent = l1[i];
+        document.getElementById('ls').appendChild(l2);
+      }
+}
+function sendRequest() {
+  let x = document.querySelectorAll('ul#ls > li');
+        for (let n of x) { n.remove(); }
     let s = document.querySelector('select#city');
     let idx = s.selectedIndex;  // idx 番目の option が選択された
 
@@ -67,9 +21,9 @@ function showSelectResult() {
     console.log('選択された ' + idx + ' 番目の option の情報:');
     console.log('  value=' + o.getAttribute('value'));  // id 属性を表示
     console.log('  textContent='+o.textContent);
-    
-    function sendRequest() {
-    let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/1816670.json';  
+    let id =o.getAttribute('value');
+
+    let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/'+id+'.json';  
       axios.get(url).then(showResult).catch(showError).then(finish);
 }
 function showResult(resp) {
@@ -82,7 +36,7 @@ function showResult(resp) {
   }
 
   // data をコンソールに出力
-  console.log(data);
+  print(data);
 
   // data.x を出力
   console.log(data.x);
@@ -96,5 +50,4 @@ function showError(err) {
 // 通信の最後にいつも実行する処理
 function finish() {
   console.log('Ajax 通信が終わりました');
-}
 }

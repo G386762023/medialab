@@ -7,8 +7,9 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
       </head>
       <body>
-        <h1>プルダウンメニューのサンプルページ</h1>
-    <label for="city">プルダウンメニュー</label>
+        <div id="result">
+        <h1>世界の天気</h1>
+    <label for="city">都市を選択</label>
     <select name="city" id="city">
       <option value="">都市名</option>
       <option value="360630">Cairo カイロ （エジプト）</option>
@@ -24,8 +25,9 @@
       <option value="5128581">New York ニューヨーク （アメリカ合衆国）</option>
       <option value="5368361">Los Angeles ロサンゼルス （アメリカ合衆国）</option>
     </select>
-    <button id="btn">コンソールに表示</button>
-         <div id="result"></div>
+    <button id="btn">検索結果を表示</button>
+    <ul id = "ls"></ul>
+  </div>
       </body>
 </html>
 <!-- print(data);
