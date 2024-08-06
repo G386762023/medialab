@@ -1,8 +1,20 @@
-ul.ls {
+h1 {
+    color: rgb(255, 255, 255);
+    text-shadow: rgb(17, 0, 112) 1px 0 2px;;
+    background: rgb(61, 103, 255);
+}
+ul {
+    color:rgb(230, 245, 255);
+    list-style-type: none;
+    text-shadow: rgb(9, 0, 63) 1px 0 2px;;
     border: 5px solid rgb(81, 81, 255);
     padding: 10px;
-    margin: 0px;
-    width: 1000px;
-    height: 80px;
+    margin: 10px;
+    width: 400px;
+    height: 170px;
     background: rgb(210, 243, 255);
+}
+label {
+    color:rgb(3, 53, 255);
+    font-size:large;
 }
