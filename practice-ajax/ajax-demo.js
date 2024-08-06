@@ -1,4 +1,4 @@
-let b = document.querySelector('#sendRequest');
+let b = document.querySelector('#btn');
 b.addEventListener('click', sendRequest);
 
 
