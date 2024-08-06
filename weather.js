@@ -11,7 +11,9 @@ function print(data){
 }
 function sendRequest() {
   let x = document.querySelectorAll('ul#ls > li');
-        for (let n of x) { n.remove(); }
+        for (let n of x) { 
+          n.remove(); 
+        }
     let s = document.querySelector('select#city');
     let idx = s.selectedIndex;  // idx 番目の option が選択された
 
