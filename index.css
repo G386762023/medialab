@@ -1,9 +1,9 @@
 body{
-    background: rgb(209, 213, 255);
+    background: rgb(220, 223, 255);
 }
 p {
 	color: rgb(255, 255, 255);
-    text-shadow: rgb(17, 0, 112) 1px 0 2px;;
+    text-shadow: rgb(13, 0, 83) 1px 0 2px;;
 }
 
 p.info {
