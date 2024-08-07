@@ -27,8 +27,8 @@ function hantei() {
   kaisu++;
   console.log(kaisu+"回目の予想: "+yoso);
   //4-1:
-  k.textContent = kaisu;
-  k1.textContent = yoso;
+  k1.textContent = kaisu;
+  a1.textContent = yoso;
   a1.insertAdjacentElement('afterbegin', a);
 // ボタンを押した後の処理をする関数 hantei() の定義
   // 将来ここでは 4 ではなくテキストボックスに指定された数値を yoso に代入する
@@ -50,6 +50,3 @@ function hantei() {
   }
   p1.insertAdjacentElement('afterbegin', r);
 }
-  // 課題3-1: 正解判定する
-  // kotae と yoso が一致するかどうか調べて結果を出力
-  // 課題3-1における出力先はコンソール
