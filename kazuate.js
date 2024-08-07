@@ -34,19 +34,19 @@ function hantei() {
   // 将来ここでは 4 ではなくテキストボックスに指定された数値を yoso に代入する
   if(kaisu >= 4 ) {
     console.log('答えは'+kotae+'でした．すでにゲームは終わっています');
-    r.textContet = '答えは'+kotae+'でした．すでにゲームは終わっています';
+    r.textContent = '答えは'+kotae+'でした．すでにゲームは終わっています';
   }else if(yoso == kotae){
     console.log('正解です．おめでとう!');
-    r.textContet = '正解です．おめでとう!';
+    r.textContent = '正解です．おめでとう!';
   }else if(kaisu === 3){
     console.log('まちがい．残念でした答えは'+kotae+'です．');
-    r.textContet = 'まちがい．残念でした答えは'+kotae+'です．';
+    r.textContent = 'まちがい．残念でした答えは'+kotae+'です．';
   }else if(kaisu <= 2 && yoso < kotae){
     console.log('まちがい．答えはもっと大きいですよ');
-    r.textContet = 'まちがい．答えはもっと大きいですよ';
+    r.textContent = 'まちがい．答えはもっと大きいですよ';
   }else if(kaisu <= 2 && yoso > kotae){
     console.log('まちがい．答えはもっと小さいですよ');
-    r.textContet = 'まちがい．答えはもっと小さいですよ';
+    r.textContent = 'まちがい．答えはもっと小さいですよ';
   }
   p1.insertAdjacentElement('afterbegin', r);
 }
