@@ -25,7 +25,7 @@ h2 {
 	color: #fcfdfd;
     text-shadow: rgb(2, 31, 247) 1px 0 1px;;
 	margin: 5px;
-	background: linear-gradient(to left, white, #63d3f8);
+	background: linear-gradient(to left, rgb(220, 223, 255), #63d3f8);
 }
 div#zentai {
 	display: grid;
